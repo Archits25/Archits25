@@ -1,0 +1,119 @@
+def get_user_choice(options):
+    """
+    Display options to the user and get their choice.
+    """
+    print("\nChoose your next step:")
+    for i, option in enumerate(options, 1):
+        print(f"{i}. {option}")
+
+    choice = input("Enter the number corresponding to your choice: ")
+    return int(choice) if choice.isdigit() else 0
+
+def start_story():
+    """
+    Begin the interactive story.
+    """
+    print("Welcome to the fifth quest of Archit's 25th Birthday!")
+
+    # Initial setting
+    print("\nAfter quarelling with your partner, you hardly got any sleep and the moment you slept, you hear a knock at your door. Knock Knock! and here comes your first choice  -  ")
+
+    # First decision
+    choice_1_options = ["Get up and open the door", "Stay in bed"]
+    choice_1 = get_user_choice(choice_1_options)
+
+    if choice_1 == 1:
+        open_door()
+    elif choice_1 == 2:
+        stay_in_bed()
+    else:
+        start_story()
+
+def open_door():
+    """
+    Story branch: Get up and open the door.
+    """
+    print("\nAs you open the door, you see someone in front of you but it's not a human (it's an aliennnnnnnn). The person asks you to follow their lead and come with them.")
+    
+    # Second decision
+    choice_2_options = ["Follow the strange alien", "Turn back"]
+    choice_2 = get_user_choice(choice_2_options)
+
+    if choice_2 == 1:
+        follow_alien()
+    elif choice_2 == 2:
+        turn_back()
+    else:
+        open_door()
+
+def stay_in_bed():
+    """
+    Story branch: Stay in bed.
+    """
+    print("\nYou decide to stay in bed and enjoy your sleep after that battle with your girlfriend last night.")
+    print("Suddenly, you hear someone laughing - a laugh that you don't seem to resist!")
+
+    # Third decision
+    choice_3_options = ["Figure out where the laugh is coming from", "Sleep right where you are"]
+    choice_3 = get_user_choice(choice_3_options)
+
+    if choice_3 == 1:
+        approach_laugh()
+    elif choice_3 == 2:
+        quit()
+    else:
+        stay_in_bed()
+
+def follow_alien():
+    """
+    Story branch: Follow the alien.
+    """
+    print("\nYou follow the alien and reach a gigantic room full of marvellous cars and Private jets.")
+    print("And the next moment that alien says - 'Surpriseeeeeee baby, It's me your bb, Ik I can be a headache sometimes but this is our future and we have to achieve it!")
+    print("I am also trying eah day to progress in my career but i get confused a lot but I am working on it and I'll succeed too - so will we <3!")
+    print("you know, I know that we know we will reach this place one day when we'll have these cars and jets as our own...so let's promise each other not to disrespect work ever - we can fight but not at the cost of our work. Work == top priority (except on my periods :P)")
+    print("PS. I oveeeee youuuuu...only 8 days tooooo goooooooo!!")
+
+def turn_back():
+    """
+    Story branch: Turn back from the hidden path.
+    """
+    print("\nYou decide to turn back and return to your bed.")
+    print("As you reach your bed, you realize your bed and other belongings are not there anymore...something strange happened")
+
+    # Fourth decision
+    choice_4_options = ["Follow the strange alien", "Sleep right where you are"]
+    choice_4 = get_user_choice(choice_4_options)
+
+    if choice_4 == 1:
+        follow_alien()
+    elif choice_4 == 2:
+        quit()
+    else:
+        turn_back()
+
+def approach_laugh():
+    """
+    Story branch: Approach the mysterious figure.
+    """
+    print("\nAs you approach, the laugh it's that same alien laughing, the alien shows you a lighted path to follow.")
+    print("The creature leads you to a gigantic room full of marvellous cars and Private jets.")
+    print("And the next moment that alien says - 'Surpriseeeeeee baby, It's me your bb, Ik I can be a headache sometimes but this is our future and we have to achieve it!")
+    print("I am also trying eah day to progress in my career but i get confused a lot but I am working on it and I'll succeed too - so will we <3!")
+    print("you know, I know that we know we will reach this place one day when we'll have these cars and jets as our own...so let's promise each other not to disrespect work ever - we can fight but not at the cost of our work. Work == top priority (except on my periods :P)")
+    print("PS. I oveeeee youuuuu...only 8 days tooooo goooooooo!!")
+
+def quit():
+    """
+    Story branch: Sleep where you are.
+    """
+    print("\nYou decide to sleep and left no option for the alien.")
+    print("The next moment you see the alien again in front of you...this time the alien is carryiny you in its arms and taking you through an awesome house adn you reach a gigantic room full of marvellous cars and Private jets.")
+    print("And the next moment that alien says - 'Surpriseeeeeee baby, It's me your bb, Ik I can be a headache sometimes but this is our future and we have to achieve it!")
+    print("I am also trying eah day to progress in my career but i get confused a lot but I am working on it and I'll succeed too - so will we <3!")
+    print("you know, I know that we know we will reach this place one day when we'll have these cars and jets as our own...so let's promise each other not to disrespect work ever - we can fight but not at the cost of our work. Work == top priority (except on my periods :P)")
+    print("PS. I oveeeee youuuuu...only 8 days tooooo goooooooo!!")
+
+# Run the story
+if __name__ == "__main__":
+    start_story()
