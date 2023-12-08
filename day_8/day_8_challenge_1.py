@@ -10,7 +10,7 @@ def main():
     ans_2 = input("I mark the passage of light, From dawn to the silent night. Without me, time seems astray, What am I? Solve and find your way.")
     
     if ans_2.lower() == "day":
-        print("Awesomeeee, let's go towards finding the surprise for today - to find it, put your answers in this link - https://medium.com/@sugaemails/happy-25th-cb25c0a273fb")
+        print("Awesomeeee, let's go towards finding the surprise for today - to find it, put your answers in the dashes in this link - https://github.com/Archits25/Archits25/blob/main/day_8/----.png")
 
 if __name__ == "__main__":
     main()
